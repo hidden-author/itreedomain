@@ -1,4 +1,4 @@
-# Rocq code for the paper "A Domain-Theoretic Framework for Composing Effectful Programs and Their Equations".
+# Rocq code for "A Domain-Theoretic Framework for Composing Effectful Programs and Their Equations"
 
 _make_ to compile (please use **Rocq 9.0.0**)
 
