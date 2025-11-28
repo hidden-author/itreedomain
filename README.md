@@ -1,15 +1,31 @@
-This is Rocq code for the paper "A Domain-Theoretic Framework for Composing1
-Effectful Programs and Their Equations".
+# Rocq code for the paper "A Domain-Theoretic Framework for Composing Effectful Programs and Their Equations".
 
-"make" to compile (please use Rocq 9.0.0)
+_make_ to compile (please use **Rocq 9.0.0**)
 
 Contents:
-domain/   domain theory (cf. Section 2 and part of the Appendix in the paper) 
+<dl>
+<dt> domain/ </dt>
+<dd> domain theory (cf. Section 2 and part of the Appendix in the paper) </dd>
 
-examples/ Syracuse and FlipWhileTrue exampes from Section 6 
-          N.B.  Syracuse.v takes a bit longer to compile due to setoid rewrites
+<dt> examples/ </dt> 
+<dd> Syracuse and FlipWhileTrue exampels from Section 6 <p>
+          N.B.  Syracuse.v takes a bit longer to compile due to setoid rewrites </p> </dd>
+		  
           
-itree/    interaction trees : definition, monadic structure, fold, equivalence, coproduct 
-					(cf. Sections 4 and 5, minus the exampels)        
+<dt> itree/  </dt>   
+<dd> interaction trees : definition, monadic structure, fold, equivalence, coproduct  <p>
+					(cf. Sections 4 and 5) </p> </dd>
+<dt> monad/ </dt>			
+<dd> CPO-monads (cf. Section 3) </dd>
 
+<dt> prob/ </dt>			
+<dd> probability CPO-monad (various aspects covered in Examples 6, 16, 19, 23)
+</dd>
+
+<dt> state/ </dt>			
+<dd> state transformer CPO-monad (various aspects covered in Examples 7, 17, 20, 22)
+</dd>
+
+
+</dl> 
 
