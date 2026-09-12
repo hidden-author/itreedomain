@@ -18,10 +18,6 @@ Contents:
 <dt> monad/ </dt>			
 <dd> CPO-monads (cf. Section 3) </dd>
 
-<dt> prob/ </dt>			
-<dd> probability CPO-monad (various aspects covered in Examples 6, 16, 19, 23)
-</dd>
-
 <dt> state/ </dt>			
 <dd> state transformer CPO-monad (various aspects covered in Examples 7, 17, 20, 22)
 </dd>
