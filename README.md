@@ -1,6 +1,6 @@
 # Rocq code for "Domain Theory Meets Interaction Trees in Rocq"
 
-_make_ to compile (please use [Rocq 9.0.0](https://rocq-prover.org/))
+_make_ to compile (please use [Rocq 9.2](https://rocq-prover.org/))
 
 Contents:
 <dl>
