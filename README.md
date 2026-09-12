@@ -5,22 +5,19 @@ _make_ to compile (please use [Rocq 9.0.0](https://rocq-prover.org/))
 Contents:
 <dl>
 <dt> domain/ </dt>
-<dd> domain theory (cf. Section 2 and part of the Appendix in the paper) </dd>
+<dd> domain theory </dd>
 
 <dt> examples/ </dt> 
-<dd> Syracuse example (cf. Section 5) <p>
+<dd> Syracuse example <p>
           N.B.  Syracuse.v takes a bit longer to compile due to setoid rewrites </p> </dd>
 		  
           
 <dt> itree/  </dt>   
-<dd> interaction trees : definition, monadic structure, fold, equivalence  <p>
-					(cf. Section 4) </p> </dd>
+<dd> interaction trees : definition, monadic structure, fold, equivalence </dd>
 <dt> monad/ </dt>			
-<dd> CPO-monads (cf. Section 3) </dd>
+<dd> CPO-monads </dd>
 
 <dt> state/ </dt>			
-<dd> state transformer CPO-monad (various aspects covered in Examples 7, 17, 20, 22)
-</dd>
+<dd> state transformer CPO-monad </dd>
 
 </dl>
-
