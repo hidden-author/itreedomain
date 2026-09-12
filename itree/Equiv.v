@@ -8,6 +8,9 @@ Variable F : Type -> Type.
 
 Variable R : forall [X], itree F X -> itree F X -> Prop.
 
+Scheme All for and.
+Scheme All for ex.
+
 Inductive itree_equiv : forall [X], itree F X -> itree F X -> Prop :=
 | itree_step : forall X m1 m2, R m1 m2 -> @itree_equiv X m1 m2
 | itree_refl : forall X m, @itree_equiv X m m
@@ -28,6 +31,7 @@ is_directed S1 -> is_directed S2 ->
 ( forall m2, member S2 m2 -> exists m1, member S1 m1 /\ itree_equiv m2 m1) 
   -> itree_equiv (lub S1) (lub S2).
 
+Create HintDb itree.
 Hint Constructors itree_equiv : itree.
 
 Lemma itree_equiv_ind' 

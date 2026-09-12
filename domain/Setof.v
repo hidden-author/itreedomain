@@ -263,13 +263,13 @@ Infix "°" := (@comp _ _ _) (at level 70, no associativity).
 
 Definition id{X:Type} : X -> X := fun x => x.
 
-Lemma comp_id_right{X Y : Type} : forall (f : X -> Y), f ° id = f.
+Lemma comp_id_right{X Y : Type} : forall (f : X -> Y), (f ° id) = f.
 Proof.
 intro f.
 now extensionality x.
 Qed.
 
-Lemma comp_id_left{X Y : Type} : forall (f : X -> Y), id° f  = f.
+Lemma comp_id_left{X Y : Type} : forall (f : X -> Y), (id° f)  = f.
 Proof.
 intro f.
 now extensionality x.
@@ -424,7 +424,7 @@ Qed.
 
 
 Lemma is_bijective_inverse  {X Y : Type} (f : X -> Y) :
-    is_bijective f -> {f' : Y -> X | f ° f' = id /\ f' ° f = id}.
+    is_bijective f -> {f' : Y -> X | (f ° f') = id /\ (f' ° f) = id}.
 intros (Hi & Hs).
 unshelve eexists.
 -
@@ -586,7 +586,7 @@ unshelve econstructor.
 Defined.  
 
 Lemma bijection_from_to{X Y : Type}: forall (b : BIJECTION X Y),
-    (from b) ° (to b) = id.
+    ((from b) ° (to b)) = id.
 Proof.  
 intro b.
 extensionality x.
@@ -595,7 +595,7 @@ Qed.
 
 
 Lemma bijection_to_from{X Y : Type}: forall (b : BIJECTION X Y),
-    (to b) ° (from b) = id.
+    ((to b) ° (from b)) = id.
 Proof.  
 intro b.
 extensionality x.

@@ -252,7 +252,7 @@ funcomp_default_ext (from I)(from_mono _ _ I) Cb Ca.
 
 Lemma Ca2Cb2Ca{A B: Poset}(I: Poset_ISOMORPHISM A B)
  (Ca:COMPLETION A)(Cb : COMPLETION B) : 
- Cb2Ca I Ca Cb °Ca2Cb I Ca Cb  = id.
+ (Cb2Ca I Ca Cb °Ca2Cb I Ca Cb)  = id.
 Proof.
 apply unique_continous_ext; 
 [ apply comp_is_continuous; apply  funcomp_default_ext_cont| 
@@ -273,7 +273,7 @@ Qed.
 
 Lemma Cb2Ca2Cb{A B: Poset}(I: Poset_ISOMORPHISM A B)
  (Ca:COMPLETION A)(Cb : COMPLETION B) : 
- Ca2Cb I Ca Cb °Cb2Ca I Ca Cb  = id.
+ (Ca2Cb I Ca Cb °Cb2Ca I Ca Cb)  = id.
 Proof.
 apply unique_continous_ext; 
 [ apply comp_is_continuous; apply  funcomp_default_ext_cont| 

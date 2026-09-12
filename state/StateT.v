@@ -135,7 +135,7 @@ Qed.
 Lemma state_bind_as_comp
   (X Y : Type) (m : stateT_functor X) :
 @stateT_bind X Y m =
-curry (uncurry (bind M (Y * S)) ° @swap _ _ ° prod_fun uncurry m).
+curry ((uncurry (bind M (Y * S)) ° @swap _ _) ° prod_fun uncurry m).
 Proof.
 extensionality f.
 extensionality s.

@@ -911,7 +911,7 @@ Lemma lnode_lub_fmap_flcnode{A:Type}{B L:A -> Type}(a:A)(l : L a)
 (f : fLPC a):
 lnode (B:= B) a l f = 
 lub (fmap (compacts_le f)
- ((inject (c := LPC A B L))° (flcnode a l) ° (rev_inj(c := fLPC a)))).
+ (((inject (c := LPC A B L))° (flcnode a l)) ° (rev_inj(c := fLPC a)))).
 Proof.
 rewrite lnode_lub_fmap_lnode.
 f_equal.
