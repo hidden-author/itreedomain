@@ -26,10 +26,5 @@ Contents:
 <dd> state transformer CPO-monad (various aspects covered in Examples 7, 17, 20, 22)
 </dd>
 
-<dl> 
-<dt> anonymous.pdf </dt>
-<dd>  anonymyzed version of an earlier paper (for details about containers)</dd>
-
-
-</dl> 
+</dl>
 
