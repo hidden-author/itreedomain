@@ -149,31 +149,5 @@ rewrite mmor_bind, mmor_bind.
 reflexivity.
 Qed.
 
-Record COPRODUCT (M1 M2 : MONAD) : Type := {
-  coproduct :> MONAD;
-  in_left : MONAD_MORPHISM M1 coproduct;
-  in_right : MONAD_MORPHISM M2 coproduct;
-  from_coproduct :
-    forall M : MONAD,
-    MONAD_MORPHISM M1 M -> MONAD_MORPHISM M2 M -> MONAD_MORPHISM coproduct M;
-  in_left_law :
-    forall
-      (M : MONAD) (f : MONAD_MORPHISM M1 M) (g : MONAD_MORPHISM M2 M)
-      (X : Type) (m1 : M1 X),
-    from_coproduct f g X (in_left X m1) = f X m1;
-  in_right_law :
-    forall
-      (M : MONAD) (f : MONAD_MORPHISM M1 M) (g : MONAD_MORPHISM M2 M)
-      (X : Type) (m2 : M2 X),
-    from_coproduct f g X (in_right X m2) = g X m2;
-  from_coproduct_unique :
-     forall
-       (M : MONAD) (f : MONAD_MORPHISM M1 M) (g : MONAD_MORPHISM M2 M)
-       (h : MONAD_MORPHISM coproduct M),
-       (forall X m1, h X (in_left X m1) = f X m1) ->
-       (forall X m2, h X (in_right X m2) = g X m2) ->
-       forall X m, from_coproduct f g X m = h X m
-}.
-
 Notation "'defined'" := Some : monad_scope.
 Notation "'undefined'" := None : monad_scope.

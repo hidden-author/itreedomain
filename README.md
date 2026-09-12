@@ -1,4 +1,4 @@
-# Rocq code for "A Domain-Theoretic Framework for Composing Effectful Programs and Their Equations"
+# Rocq code for "Domain Theory Meets Interaction Trees in Rocq"
 
 _make_ to compile (please use [Rocq 9.0.0](https://rocq-prover.org/))
 
@@ -8,13 +8,13 @@ Contents:
 <dd> domain theory (cf. Section 2 and part of the Appendix in the paper) </dd>
 
 <dt> examples/ </dt> 
-<dd> Syracuse and FlipWhileTrue exampels from Section 6 <p>
+<dd> Syracuse example (cf. Section 5) <p>
           N.B.  Syracuse.v takes a bit longer to compile due to setoid rewrites </p> </dd>
 		  
           
 <dt> itree/  </dt>   
-<dd> interaction trees : definition, monadic structure, fold, equivalence, coproduct  <p>
-					(cf. Sections 4 and 5) </p> </dd>
+<dd> interaction trees : definition, monadic structure, fold, equivalence  <p>
+					(cf. Section 4) </p> </dd>
 <dt> monad/ </dt>			
 <dd> CPO-monads (cf. Section 3) </dd>
 

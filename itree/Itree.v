@@ -104,8 +104,8 @@ intros x y Heq.
 unfold pure in Heq.
 apply lnode_injective in Heq.
 destruct Heq as (_ & _ & Heq).
-inversion Heq; subst.
-now apply inj_pair2 in H1.
+apply JMeq_eq in Heq.
+exact Heq.
 Qed.
 
 
@@ -448,8 +448,13 @@ destruct Hle as [Heq | [(w & Heq1 & Heq2) |
  apply pure_not_impure.
 -
  apply impure_is_injective in Heq1,Heq2.
- destruct Heq1 as (Heq & Hj1 & Hj2); subst. 
- destruct Heq2 as (Heq & Hj1 & Hj2); subst.
+ destruct Heq1 as (Heq & Hj1 & Hj2).
+ subst W.
+ apply JMeq_eq in Hj1, Hj2.
+ subst.
+ destruct Heq2 as (Heq & Hj1 & Hj2).
+ apply JMeq_eq in Hj1, Hj2.
+ subst.
  intro u.
  apply Ha.
 Qed.
@@ -763,7 +768,10 @@ destruct Hu as [Heq | [(w & Heq1 & Heq2) |
 - symmetry in Heq2; contradict Heq2; apply pure_not_impure.
 -
  apply impure_is_injective in Heq2.
- destruct Heq2 as (HeqT & Hj1 & Hj2); subst.
+ destruct Heq2 as (HeqT & Hj1 & Hj2).
+ subst W.
+ apply JMeq_eq in Hj1, Hj2.
+ subst.
  now exists c.
 Qed. 
  

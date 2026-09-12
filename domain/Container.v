@@ -866,7 +866,7 @@ member S' x -> exists (y: fLPC a),
   exists f'.
   f_equal.
   specialize (Hl' _ _ _ Hmu).
-  inversion Hl'; subst; reflexivity.
+  apply JMeq_eq in Hl'; subst; reflexivity.
 }
 clear Ha_cp.
 remember  (fun x : fLPC a => member S' (lnode a l x))
@@ -1072,6 +1072,8 @@ contradict Habs; apply lnode_not_lnbot].
 destruct Hc as (a' & l' & f' & Heq).
 rewrite <- lnode_flcnode_inject in Heq.
 apply lnode_injective in Heq; destruct Heq as (Heq & Hj & Hj').
+subst a'.
+apply JMeq_eq in Hj, Hj'.
 subst.
 apply inject_compact.
 Qed.
@@ -1430,9 +1432,14 @@ Definition bisim{A:Type}{B L:A->Type}(c c' : LPC A B L) :=
     +
      right.
      apply lnode_injective in Heq1,Heq2.
-     destruct Heq1 as (Heq1 & Heq'1 & Heq''1); subst.
-     destruct Heq2 as (Heq2 & Heq'2 & Heq''2); subst.
-     exists a1,  l1, f'1, f1; repeat split; auto.
+     destruct Heq1 as (Heq1 & Heq'1 & Heq''1).
+     subst a1.
+     apply JMeq_eq in Heq'1, Heq''1.
+     subst.
+     destruct Heq2 as (Heq2 & Heq'2 & Heq''2).
+     apply JMeq_eq in Heq'2, Heq''2.
+     subst.
+     exists a,  l1, f'1, f1; repeat split; auto.
  -
   intros [(Heq1 & Heq2) | (a & l & f & f' & Heq1 & Heq2 & Ha)];subst.
   +

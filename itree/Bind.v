@@ -411,7 +411,10 @@ Lemma fbind_impure{F : Type -> Type}{X Y Z: Type}
  now contradict Hneq.
  -
   apply impure_is_injective in e.
-  destruct e as (He & Hj & Hj'); now subst.
+  destruct e as (He & Hj & Hj').
+  subst x.
+  apply JMeq_eq in Hj, Hj'.
+  now subst.
  -
   specialize (impure_not_fbot fz k) as Hne.
   now contradict Hne.
